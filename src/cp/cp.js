@@ -1,6 +1,9 @@
+import cp from "child_process";
+
+const SCRIPT_PATH = "./src/cp/files/script.js";
+
 const spawnChildProcess = async (args) => {
-    // Write your code here
+	cp.fork(SCRIPT_PATH, args);
 };
 
-// Put your arguments in function call to test this functionality
-spawnChildProcess( /* [someArgument1, someArgument2, ...] */);
+spawnChildProcess(["asd", "asdasd", 222]);
